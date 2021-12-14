@@ -20,7 +20,7 @@ class BFping(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        if message.author.bot or not message.channel.permissions_for(message.author, discord.Permissions.manage_messages):
+        if message.author.bot or not message.channel.permissions_for(message.author).manage_messages:
             return
         
         for x in data:
